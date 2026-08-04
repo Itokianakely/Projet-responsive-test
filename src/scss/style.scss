@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+/* --- VARIABLES DE COULEURS --- */
+$couleur-topbar: #1e2235;
+$couleur-jaune: #ffb703;
+$couleur-navbar: white;
+body {
+  @apply m-0 font-sans antialiased;
+}
+
+/* --- SECTION TOP BAR --- */
+.top-bar {
+  @apply bg-[#1e2235] text-white flex flex-row items-center place-content-between h-12 py-2 pl-12.5 gap-1.5;
+
+  @media (max-width: 639px) {
+    @apply flex-col h-auto py-4 px-4 gap-4;
+  }
+
+  @screen sm {
+    @apply flex-row justify-between px-10 py-0 gap-0;
+  }
+
+  @screen lg {
+    @apply pl-[120px] pr-0;
+  }
+
+  .top-bar-left {
+    @apply flex items-center text-sm font-medium gap-4;
+
+    @media (max-width: 639px) {
+      @apply justify-center w-full;
+    }
+  }
+
+  .top-bar-right {
+    @apply flex items-center text-base font-medium gap-2.5;
+
+    @media (max-width: 639px) {
+      @apply flex-col gap-3 w-full text-[13px] text-center;
+    }
+
+    @screen lg {
+      @apply gap-6;
+    }
+  }
+
+  .btn-tel {
+    @apply bg-[#ffb703] flex text-black font-bold h-12 py-3.5 px-3.5 no-underline transition-colors;
+
+    @media (max-width: 639px) {
+      @apply w-full justify-center rounded;
+    }
+
+    @screen lg {
+      @apply px-8 items-center;
+    }
+
+    &:hover {
+      @apply bg-[#ffa200];
+    }
+  }
+}
+
+/* --- SECTION NAVIGATION BAR --- */
+.nav-bar {
+  @apply bg-[#ffffff] text-black flex flex-col lg:flex-row items-center justify-between w-full max-w-full;
+  @apply py-4 sm:py-5 px-4 sm:px-12.5 gap-4 lg:gap-0 lg:h-22;
+
+  .nav-bar-logo {
+    @apply flex items-center text-[32px] lg:text-[40px] font-bold shrink-0;
+  }
+  
+  .nav-bar-menu {
+    @apply flex flex-wrap items-center justify-center text-[14px] lg:text-[16px] gap-3 sm:gap-6 lg:gap-[30px] font-medium w-full lg:w-auto;
+
+    a {
+      @apply hover:text-[#ffb703] transition-colors whitespace-nowrap;
+    }
+  } 
+}
+/* --- SECTION HERO --- */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/image.jpg');  background-size: cover;
+  background-position: center;
+  
+  @apply w-full flex items-center min-h-[500px] px-12.5 py-25;
+
+  @screen lg {
+    @apply min-h-[650px] px-[120px] py-0;
+  }
+
+  .hero-contenu {
+    @apply text-white w-full;
+
+    h1 {
+      @apply text-[55px] font-bold leading-[1.15] tracking-tight mb-6;
+
+      @screen md {
+        @apply text-[52px];
+      }
+    }
+
+    p {
+      @apply text-[20px] font-normal leading-[1.7] mb-10 text-gray-100;
+
+      @screen md {
+        @apply text-[17px];
+      }
+    }
+
+    .hero-boutons {
+      @apply flex flex-col sm:flex-row gap-4;
+
+      a {
+        @apply flex items-center justify-center px-8 py-3.5 rounded-[4px] font-bold text-[16px] transition-transform hover:-translate-y-1;
+      }
+
+      .btn-blanc {
+        @apply bg-white text-[#242938];
+      }
+
+      .btn-jaune {
+        @apply bg-[#ffb703] text-black;
+      }
+    }
+  }
+}
