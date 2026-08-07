@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
 /* --- VARIABLES DE COULEURS --- */
-$couleur-topbar: #1e2235;
+$couleur-topbar: #1E264A;
 $couleur-jaune: #ffb703;
 $couleur-navbar: white;
+$couleur-text: black;
+
 body {
   @apply m-0 font-sans antialiased;
 }
@@ -74,7 +76,7 @@ body {
     @apply flex flex-wrap items-center justify-center text-[14px] lg:text-[16px] gap-3 sm:gap-6 lg:gap-[30px] font-medium w-full lg:w-auto;
 
     a {
-      @apply hover:text-[#ffb703] transition-colors whitespace-nowrap;
+      @apply hover:text-[#B12A43] transition-colors whitespace-nowrap;
     }
   } 
 }
@@ -123,5 +125,566 @@ body {
         @apply bg-[#ffb703] text-black;
       }
     }
+  }
+}
+
+/* --- SECTION SERVICES --- */
+.services-section {
+  @apply bg-white w-full max-w-full py-16 sm:py-20;
+
+  @apply px-4 sm:px-12.5 lg:px-[50px];
+
+  .services-header {
+    @apply text-center mb-12 sm:mb-16;
+
+    h2 {
+      @apply text-[42px] sm:text-[38px] font-bold text-[#1E264A] tracking-tight mb-3;
+    }
+
+    p {
+      @apply text-[16px] sm:text-[16px] text-[$couleur-text] font-normal max-w-2xl mx-auto;
+    }
+  }
+
+  .services-grid {
+    /* Grille responsive : 1 colonne sur mobile, 3 colonnes sur tablettes/PC */
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12;
+
+    .service-card {
+      @apply bg-[#FAFAFA] border border-transparent rounded-[30px] p-8  hover:shadow-md transition-shadow flex flex-col items-center text-center;
+
+      .service-icon {
+        @apply text-[#9b2c2c] mb-6 flex items-center justify-center;
+      }
+
+      h3 {
+        @apply text-[28px] sm:text-[20px] font-bold text-[#1E264A] mb-4 leading-snug;
+      }
+
+      p {
+        @apply text-[16px] text-[$couleur-text] font-normal leading-relaxed;
+      }
+    }
+  }
+
+  .services-footer {
+    @apply flex justify-center;
+
+    .btn-learn-more {
+      @apply bg-[#9b2c2c] text-white font-bold text-[16px] px-8 py-3.5 rounded-[5px] transition-transform hover:-translate-y-1  hover:bg-[#822323] no-underline;
+    }
+  }
+}
+
+/* --- SECTION CRÉMATION OU INHUMATION --- */
+.choix-section {
+  @apply bg-white w-full max-w-full sm:pb-24 sm:pt-1;
+  /* Marges strictes pour l'alignement parfait */
+  @apply px-4 sm:px-12.5 lg:px-[50px];
+
+  .choix-header {
+    @apply text-center mb-12 sm:mb-16;
+
+    h2 {
+      @apply text-[42px] sm:text-[34px] font-bold text-[#1E264A] mb-4 tracking-tight;
+    }
+
+    p {
+      @apply text-[16px] sm:text-[16px] text-[$couleur-text] font-normal max-w-2xl mx-auto leading-relaxed;
+    }
+  }
+
+  .choix-grid {
+    /* Sur mobile, on empile les deux blocs. Sur grand écran, on fait 2 colonnes */
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-12 lg:mb-16;
+
+    .choix-card {
+      /* Le texte se met à côté de l'image (flex-row) sauf sur très petit écran */
+      @apply flex flex-col sm:flex-row items-center lg:h-[267px] sm:items-start gap-6 hover:shadow-md transition-shadow;
+
+      .choix-img {
+        @apply w-full sm:w-1/2 object-cover lg:h-[267px] aspect-video sm:aspect-square md:aspect-[4/3] rounded-[2px] shadow-sm;
+      }
+
+      .choix-text {
+        @apply w-full sm:w-1/2 pt-2;
+
+        h3 {
+          @apply text-[30px] sm:text-[22px] font-bold text-[$couleur-text] mb-3;
+        }
+
+        p {
+          @apply text-[16px] sm:text-[14px] text-[#7D7D7D] font-bold leading-relaxed;
+        }
+      }
+    }
+  }
+
+  .choix-footer {
+    @apply flex justify-center;
+
+    .btn-voir-plus {
+      @apply bg-[#9b2c2c] text-white font-bold text-[16px] px-8 py-3.5 rounded-[5px] transition-transform hover:-translate-y-1  hover:bg-[#822323] no-underline;
+    }
+  }
+}
+
+/* --- SECTION SERVICE PERSONNALISÉ --- */
+.service-perso-section {
+  @apply bg-[#FAFAFA]  w-full max-w-full py-16 sm:py-24;
+  @apply px-4 sm:px-12.5 lg:px-[50px] sm:mb-12.5 lg:mb-12.5;
+
+  .service-perso-container {
+    /* Sur mobile l'image est au dessus, sur grand écran l'image est à gauche et le texte à droite */
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center;
+
+    .service-perso-img {
+      @apply w-full h-auto max-h-[350px] sm:max-h-[450px] object-cover rounded-[2px] shadow-sm;
+    }
+
+    .service-perso-text {
+      h2 {
+        @apply text-[42px] sm:text-[36px] font-bold text-[#1E264A] leading-tight mb-6;
+      }
+
+      p {
+        @apply text-[18px] sm:text-[15px] text-black font-normal leading-[1.8] text-justify sm:text-left;
+      }
+    }
+  }
+}
+
+/* --- SECTION ENGAGEMENT --- */
+.engagement-section {
+  @apply relative w-full flex items-center min-h-[500px] lg:min-h-[600px] py-16 sm:py-24;
+
+  .engagement-bg {
+    @apply absolute inset-0 w-full h-full;
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  .engagement-container {
+    @apply relative z-10 w-full px-4 sm:px-12.5 lg:px-[50px];
+
+    .engagement-card {
+      @apply bg-white p-8 sm:p-12 w-full lg:max-w-[42%] shadow-lg rounded-[2px];
+      
+      h2 {
+        @apply text-[42px] sm:text-[34px] font-bold text-[#1E264A] mb-4 leading-tight;
+      }
+      
+      p {
+        @apply text-[16x] text-[#7D7D7D] leading-relaxed;
+      }
+
+      .btn-talk {
+        @apply bg-[#9b2c2c] text-white font-bold text-[16px] px-8 py-3 rounded-[5px] inline-block transition-transform hover:-translate-y-1 hover:bg-[#822323] no-underline;
+
+      }
+    }
+  }
+}
+
+/* --- SECTION AVIS CLIENTS --- */
+.testimonials-section {
+  @apply bg-white w-full max-w-full py-16  flex flex-col items-center;
+  @apply px-4 sm:px-12.5 lg:px-[120px];
+
+  h2 {
+    @apply text-[42px] sm:text-[36px] font-bold text-[#1E264A] mb-10 sm:mb-16 text-center;
+  }
+
+  .testimonial-wrapper {
+    @apply w-full max-w-5xl flex items-center justify-between gap-4 sm:gap-8 mb-10 transition-transform hover:-translate-y-1;
+
+    .nav-arrow {
+      @apply shrink-0 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full cursor-pointer transition-colors shadow-sm;
+      
+      svg {
+        @apply w-5 h-5;
+      }
+      
+      &.prev-arrow {
+        @apply bg-gray-50 text-gray-600 hover:bg-[#1E264A]  border border-gray-100;
+      }
+      
+      &.next-arrow { 
+        @apply bg-gray-50 text-gray-600 hover:bg-[#1E264A] border border-gray-100;
+      }
+    }
+
+    .testimonial-card {
+      @apply bg-white p-8 sm:p-12 rounded-lg shadow-[0_0_30px_rgba(0,0,0,0.06)] flex-1 text-center border border-gray-50;
+
+      .stars {
+        @apply flex justify-center gap-2.5 mb-6;
+        svg {
+          @apply w-5 h-5 sm:w-6 sm:h-6 text-[#B12A43];
+        }
+      }
+
+      .quote {
+        @apply text-[22px] sm:text-[17px] text-[#1E264A] font-semibold leading-relaxed mb-8 max-w-2xl mx-auto;
+      }
+
+      .author {
+        @apply flex items-center justify-center gap-4;
+        
+        .avatar {
+          @apply w-12 h-12 bg-[#d9d9d9] rounded-full;
+        }
+        
+        .author-info {
+          @apply text-left;
+          
+          h4 {
+            @apply text-[22px] font-semibold text-[$couleur-text] m-0;
+          }
+          
+          span {
+            @apply text-[16px] font-normal text-[#7D7D7D];
+          }
+        }
+      }
+    }
+  }
+
+  .testimonials-footer {
+    @apply flex justify-center w-full;
+
+    .btn-voir-plus {
+        @apply bg-[#9b2c2c] text-white font-bold text-[16px] px-8 py-3 rounded-[5px] inline-block transition-transform hover:-translate-y-1 hover:bg-[#822323] no-underline;
+    }
+  }
+}
+
+/* --- SECTION RAPATRIEMENT --- */
+.rapatriement-section {
+  @apply bg-white w-full max-w-full pb-16 sm:pb-24 px-4 sm:px-12.5 lg:px-[50px];
+
+  .section-title {
+    @apply text-center text-[42px] sm:text-[36px] font-bold text-[#1E264A] mb-12 sm:mb-16;
+  }
+
+  .rapatriement-grid {
+    @apply w-full grid grid-cols-1 lg:grid-cols-[1fr_380px_1fr] gap-6 lg:gap-8 items-stretch mb-12;
+
+    .cards-column {
+      @apply flex flex-col gap-6 justify-between w-full;
+    }
+
+    .image-column {
+      @apply order-first lg:order-none w-full h-[300px] lg:h-full flex justify-center;
+      
+      img {
+        @apply w-full h-full object-cover rounded-[4px] shadow-sm;
+      }
+    }
+
+    .rapat-card {
+      @apply p-8 rounded-[12px] flex-1 flex flex-col border border-transparent transition-colors duration-300 w-full;
+
+      &:hover {
+        @apply border-[#B12A43] bg-white;
+      }
+
+      &.bg-gray {
+        @apply bg-[#f8f9fa];
+      }
+
+      .icon-wrapper {
+        @apply text-[#bd2d43] mb-4;
+        svg { @apply w-[60px] h-[60px]; }
+      }
+
+      h3 {
+        @apply text-[24px] sm:text-[18px] font-semibold text-[$couleur-text] mb-3 leading-snug;
+      }
+
+      p {
+        @apply text-[16px] text-[#7D7D7D] font-normal leading-relaxed m-0;
+      }
+    }
+  }
+
+  .rapatriement-footer {
+    @apply flex justify-center;
+    .btn-voir-plus {
+      @apply bg-[#9b2c2c] text-white font-bold text-[16px] px-8 py-3 rounded-[5px] inline-block transition-transform hover:-translate-y-1 hover:bg-[#822323] no-underline;
+    }
+  }
+}
+/* --- SECTION CONTACT --- */
+.contact-section {
+  @apply bg-[#1e2235] text-white w-full max-w-full py-20 sm:py-24 px-4 sm:px-12.5 lg:px-[50px];
+
+  .contact-container {
+    /* Grille responsive : 1 colonne mobile, 2 colonnes PC */
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 ;
+
+    /* BLOC GAUCHE */
+    .contact-info {
+      h2 {
+        @apply text-[50px] sm:text-[40px] font-semibold leading-tight mb-6;
+      }
+      
+      .description {
+        @apply text-[18px] sm:text-[15px] text-white font-normal leading-relaxed mb-10;
+      }
+
+      .contact-methods {
+        @apply flex flex-col gap-4 mb-10;
+        
+        .method-card {
+          @apply bg-[#2a2e45] p-5 rounded-[8px] w-[60%] flex items-center gap-5 transition-colors hover:bg-[#343851];
+          
+          svg {
+            @apply w-6 h-6 text-gray-300;
+          }
+
+          h4 {
+            @apply text-[20px] font-medium text-white m-0 mb-1;
+          }
+
+          span {
+            @apply text-[18px] sm:text-[16px] font-normal text-white;
+          }
+        }
+      }
+
+      .social-links {
+        @apply flex gap-4;
+        
+        a {
+          @apply flex items-center justify-center w-10 h-10 rounded-full border border-gray-500 text-gray-400 transition-all hover:-translate-y-1 hover:text-[#1e2235] hover:border-white;
+          svg { @apply w-4 h-4; }
+        }
+      }
+    }
+
+    /* BLOC DROITE (Formulaire) */
+    .contact-form-wrapper {
+      @apply bg-white p-8 sm:p-10 rounded-[16px] shadow-xl;
+
+      h3 {
+        @apply text-[22px] sm:text-[30px] lg:text-[40px] text-center font-semibold text-[#1E264A] mb-8;
+      }
+
+      .form-grid {
+        @apply grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6;
+      }
+
+      .input-group {
+        @apply flex flex-col;
+
+        label {
+          @apply text-[16px] font-semibold text-[#1E264A] mb-2 ml-1;
+        }
+
+        input, textarea {
+          @apply w-full bg-[#f9fafb] border border-gray-200 text-black text-[16px] rounded-[6px] px-4 py-3 outline-none transition-colors focus:border-[#bd2d43] focus:bg-white;
+        }
+        
+        textarea {
+          @apply resize-none;
+        }
+      }
+
+      .btn-submit {
+        @apply mt-6 bg-[#bd2d43] text-white font-bold text-[14px] px-8 py-3.5 rounded-[6px] transition-colors hover:-translate-y-1 hover:bg-[#822323] cursor-pointer no-underline;
+      }
+    }
+  }
+}
+
+/* --- SECTION FAQ --- */
+.faq-section {
+  @apply bg-white w-full max-w-full py-16 sm:py-24 px-4 sm:px-12.5 lg:px-[120px];
+
+  .faq-title {
+    @apply text-[42px] sm:text-[36px] font-bold text-[#1e2235] text-center mb-12 sm:mb-16 leading-tight max-w-3xl mx-auto;
+
+    .highlight {
+      @apply text-[#38bdf8];
+    }
+  }
+
+  .faq-list {
+    @apply max-w-4xl mx-auto flex flex-col gap-2;
+
+    .faq-item {
+      @apply border-b border-gray-200 pb-4 pt-2 transition-all;
+
+      /* Rotation automatique de la flèche quand l'accordéon est ouvert */
+      &[open] {
+        .chevron {
+          @apply rotate-180;
+        }
+      }
+
+      .faq-header {
+        @apply flex justify-between items-center cursor-pointer font-bold text-[#1e2235] text-[15px] sm:text-[20px] py-3 list-none select-none;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+
+        .chevron {
+          @apply w-4 h-4 text-gray-400 transition-transform duration-200 shrink-0 ml-4;
+        }
+      }
+
+      .faq-body {
+        @apply text-[13px] sm:text-[14px] text-gray-500 leading-relaxed mt-2 pr-6 m-0;
+      }
+    }
+  }
+}
+
+/* --- SECTION PARTENAIRES --- */
+.partners-section {
+  @apply bg-white w-full max-w-full py-16 sm:py-24 px-4 sm:px-12.5 lg:px-[50px];
+
+  .partners-container {
+    @apply flex flex-col lg:pl-[50px] lg:flex-row items-center justify-between gap-10 lg:gap-25;
+
+    .partners-text {
+      @apply flex-1 text-left w-[60%];
+
+      h2 {
+        @apply text-[28px] sm:text-[42px] font-bold text-[#1E264A] mb-4 leading-tight max-w-md;
+      }
+
+      p {
+        @apply text-[14px] sm:text-[15px] text-gray-500 leading-relaxed m-0 max-w-lg;
+      }
+    }
+
+    .partners-logos {
+      @apply flex flex-wrap sm:flex-nowrap gap-4 justify-center shrink-0;
+
+      .partner-card {
+        @apply w-32 h-32 sm:w-40 sm:h-40 rounded-[4px] flex items-center justify-center p-4 text-white text-center shadow-sm;
+      }
+    }
+  }
+}
+
+/* --- SECTION HELP --- */
+.help-section {
+  @apply bg-white w-full max-w-full pt-16 sm:pt-20 px-4 sm:px-12.5 lg:px-[50px] text-center;
+
+  h2 {
+    @apply text-[26px] sm:text-[42px] font-bold text-[#1E264A] mb-8;
+  }
+
+  .help-buttons {
+    @apply flex flex-col sm:flex-row items-center justify-center gap-4;
+
+    .help-btn {
+      @apply bg-[#EDF6FF] text-[#1E264A] h-[95px] font-normal text-[16px] px-8 py-3.5 rounded-[8px] flex items-center gap-3 transition-colors hover:bg-[#dbeafe] no-underline w-full sm:w-auto justify-center;
+    }
+  }
+}
+
+/* --- SECTION BLOG --- */
+.blog-section {
+  @apply bg-white w-full max-w-full pt-12.5 sm:pt-24 px-4 sm:px-12.5 lg:px-[50px];
+
+  .section-title {
+    @apply text-center text-[28px] sm:text-[42px] font-bold text-[#1E264A] mb-12;
+  }
+
+  .blog-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12;
+
+    .blog-card {
+      @apply flex flex-col;
+
+      .blog-image {
+        @apply w-full aspect-[4/3] bg-[#d9d9d9] mb-6 rounded-[2px];
+      }
+
+      .blog-title {
+        @apply text-[18px] sm:text-[20px] font-semibold text-[#1E264A] mb-3;
+      }
+
+      .blog-excerpt {
+        @apply text-[16px] text-[#7D7D7D] leading-relaxed mb-6;
+      }
+
+      .blog-meta {
+        @apply flex flex-wrap items-center gap-4 mt-auto border-t border-gray-100 pt-4;
+
+        .meta-item {
+          @apply flex items-center gap-[30px] text-[11px] sm:text-[14px] text-[#7D7D7D] font-medium;
+
+          svg {
+            @apply w-4 h-4;
+          }
+        }
+      }
+    }
+  }
+
+  .blog-footer {
+    @apply flex justify-center;
+
+    .btn-view-more {
+      @apply bg-[#ffbc3b] text-[#1E264A] font-bold text-[14px] px-10 py-3 rounded-[4px] transition-colors hover:-translate-y-1 hover:bg-[#e6a835] no-underline shadow-sm;
+    }
+  }
+}
+
+/* --- FOOTER --- */
+.site-footer {
+  @apply bg-white w-full max-w-full pt-16 sm:pt-24 pb-8 px-4 sm:px-12.5 lg:px-[120px];
+
+  .footer-container {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 mb-16;
+
+    .footer-col {
+      @apply flex flex-col;
+
+      /* Typographie commune pour les titres et textes du footer */
+      h4 {
+        @apply text-[15px] font-bold text-[#1e2235] mb-2;
+      }
+
+      p {
+        @apply text-[13px] sm:text-[14px] text-gray-500 leading-relaxed;
+      }
+    }
+
+    .brand-col {
+      .footer-logo {
+        @apply text-[28px] font-black text-[#1e2235] mb-4 tracking-tight;
+      }
+      
+      .footer-desc {
+        @apply mb-6 max-w-sm;
+      }
+
+      .social-links {
+        @apply flex gap-3;
+        
+        a {
+          @apply flex items-center justify-center w-9 h-9 rounded-full border border-gray-400 text-gray-500 transition-all hover:bg-[#1e2235] hover:text-white hover:border-[#1e2235];
+          svg { @apply w-4 h-4; }
+        }
+      }
+    }
+
+    .address-col {
+      .btn-contact-us {
+        @apply mt-6 bg-[#1e2235] text-white font-bold text-[14px] px-8 py-3 rounded-[4px] transition-colors hover:bg-[#2c324b] hover:-translate-y-1 no-underline inline-block w-max;
+      }
+    }
+  }
+
+  .footer-bottom-line {
+    @apply w-full border-t border-gray-300;
   }
 }
