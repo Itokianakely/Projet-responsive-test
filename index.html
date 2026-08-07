@@ -1,20 +1,26 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Mon Site Funéraire</title>
   </head>
   <body>
-    <!-- SECTION TOP BAR -->
 
+    <!-- SECTION TOP BAR -->
     <section class="top-bar">
-      <div class="top-bar-left">8:00 am - 6:00 pm</div>
-      <div class="top-bar-right">
-        <span>Available 24/7 | Call Now</span>
-        <a href="tel:+350024605008" class="btn-tel">+3(500) 2460-5008</a>
-      </div>
-    </section>
+  <!-- BLOC GAUCHE -->
+  <div class="top-bar-left">
+    <span>8:00 am - 6:00 pm</span>
+  </div>
+  
+  <!-- BLOC DROITE -->
+  <div class="top-bar-right">
+    <span class="availability">Available 24/7 | Call Now</span>
+    <a href="tel:+350024605008" class="btn-tel">+3(500) 2460-5008</a>
+  </div>
+</section>
 
     <!-- SECTION NAVIGATION BAR-->
       <section class="nav-bar">
@@ -161,14 +167,16 @@
         
         <!-- Carte Avis -->
         <div class="testimonial-card">
-          <div class="stars">
-            <!-- 5 Étoiles -->
-            <img src="./src/assets/star.svg" alt="star" class="hover:-translate-y-1 transition-transform duration-200">
-            <img src="./src/assets/star.svg" alt="star" class="hover:-translate-y-1 transition-transform duration-200"> 
-            <img src="./src/assets/star.svg" alt="star" class="hover:-translate-y-1 transition-transform duration-200">
-            <img src="./src/assets/star.svg" alt="star" class="hover:-translate-y-1 transition-transform duration-200">
-            <img src="./src/assets/star.svg" alt="star" class="hover:-translate-y-1 transition-transform duration-200">
-          </div>
+       
+          <!-- 5 Étoiles (images) -->
+        <div class="stars w-full flex justify-center items-center gap-2.5 mb-6">
+          <img src="./src/assets/star.svg" alt="Étoile" class="w-3 h-3 sm:w-6 sm:h-6 object-contain hover:-translate-y-1 transition-transform duration-200" />
+          <img src="./src/assets/star.svg" alt="Étoile" class="w-3 h-3 sm:w-6 sm:h-6 object-contain hover:-translate-y-1 transition-transform duration-200" />
+          <img src="./src/assets/star.svg" alt="Étoile" class="w-3 h-3 sm:w-6 sm:h-6 object-contain hover:-translate-y-1 transition-transform duration-200" />
+          <img src="./src/assets/star.svg" alt="Étoile" class="w-3 h-3 sm:w-6 sm:h-6 object-contain hover:-translate-y-1 transition-transform duration-200" />
+          <img src="./src/assets/star.svg" alt="Étoile" class="w-3 h-3 sm:w-6 sm:h-6 object-contain hover:-translate-y-1 transition-transform duration-200" />
+        </div>
+
           <p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facilis dicta accusamus eveniet explicabo aliquid cupiditate perspiciatis sint rem quasi.</p>
           <div class="author">
             <!-- Cercle gris  -->
@@ -202,7 +210,7 @@
           <div class="rapat-card bg-gray">
             <div class="icon-wrapper">
               <!-- Icône Coeur -->
-                <img src="./src/assets/icone-coeur.svg" alt="icone-coeur" class="group-hover:invert">
+                <img src="./src/assets/icone-coeur.svg" alt="icone-coeur" class="w-8 h-8 sm:w-[50px] sm:h-[50px] object-contain ">
             </div>
             <h3>Rapatriement National</h3>
             <p>Le rapatriement national permet de transférer un défunt vers une autre ville ou région pour organiser les funérailles souhaitées.</p>
@@ -212,7 +220,7 @@
           <div class="rapat-card bg-gray">
             <div class="icon-wrapper">
               <!-- Icône Prise en charge -->
-                <img src="./src/assets/icone-coeur.svg" alt="icone-coeur" class="group-hover:invert">
+                <img src="./src/assets/icone-coeur.svg" alt="icone-coeur" class="w-8 h-8 sm:w-[50px] sm:h-[50px]">
             </div>
             <h3>Prise en charge immédiate :</h3>
             <p>Dès le décès, nous organisons le transport du défunt et prenons en charge toutes les démarches administratives liées au transfert.</p>
@@ -231,7 +239,7 @@
           <div class="rapat-card bg-gray">
             <div class="icon-wrapper">
               <!-- Icône Transport -->
-                <img src="./src/assets/icone-maison.svg" alt="icone-maison" class="group-hover:invert">
+                <img src="./src/assets/icone-maison.svg" alt="icone-maison" class="w-8 h-8 sm:w-[50px] sm:h-[50px]">
             </div>
             <h3>Transport sécurisé</h3>
             <p>Le défunt est transporté dans un véhicule funéraire sécurisé, garantissant respect, dignité et conformité aux normes d'hygiène et de sécurité.</p>
@@ -241,7 +249,7 @@
           <div class="rapat-card bg-gray">
             <div class="icon-wrapper">
               <!-- Icône Assistance -->
-                <img src="./src/assets/icone-personne.svg" alt="icone-personne" class="group-hover:invert">
+                <img src="./src/assets/icone-personne.svg" alt="icone-personne" class="w-8 h-8 sm:w-[50px] sm:h-[50px]">
             </div>
             <h3>Assistance et suivi avec la famille</h3>
             <p>Nous accompagnons les familles tout au long du rapatriement, les informant à chaque étape et restant disponibles pour toute assistance.</p>
@@ -383,11 +391,11 @@
         </div>
         <div class="partners-logos">
           <!-- Carte Partenaire 1 -->
-                <img src="./src/assets/partenaire-pf-france.svg" alt="partenaire-pf-france" class="transition-colors hover:-translate-y-1">
+                <img src="./src/assets/partenaire-pf-france.svg" alt="partenaire-pf-france" class="transition-colors w-16 h-16 sm:w-full sm:h-full hover:-translate-y-1">
           <!-- Carte Partenaire 2 -->
-                <img src="./src/assets/partenaire-val-de-marne.svg" alt="partenaire-val-de-marne" class="transition-colors hover:-translate-y-1">
+                <img src="./src/assets/partenaire-val-de-marne.svg" alt="partenaire-val-de-marne" class="transition-colors w-16 h-16 sm:w-full sm:h-full hover:-translate-y-1">
           <!-- Carte Partenaire 3 -->
-                <img src="./src/assets/partenaire-pf-france2.svg" alt="partenaire-pf-france2" class="transition-colors hover:-translate-y-1">
+                <img src="./src/assets/partenaire-pf-france2.svg" alt="partenaire-pf-france2" class="transition-colors w-16 h-16 sm:w-full sm:h-full hover:-translate-y-1">
           </div>
         </div>
       </div>

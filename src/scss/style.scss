@@ -147,6 +147,7 @@ body {
   }
 
   .services-grid {
+    /* Grille responsive : 1 colonne sur mobile, 3 colonnes sur tablettes/PC */
     @apply grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12;
 
     .service-card {
@@ -315,9 +316,6 @@ body {
 
       .stars {
         @apply flex justify-center gap-2.5 mb-6;
-        svg {
-          @apply w-2 h-2 sm:w-6 sm:h-6 lg:w-6 lg:h-6 xl:w-6 xl:h-6 text-[#B12A43];
-        }
       }
 
       .quote {
@@ -538,7 +536,7 @@ body {
 
 /* --- SECTION PARTENAIRES --- */
 .partners-section {
-  @apply bg-white w-full max-w-full py-16 sm:py-24 px-4 sm:px-12.5 lg:px-[50px];
+  @apply bg-white w-full max-w-full py-5 sm:py-24 px-4 sm:px-12.5 lg:px-[50px];
 
   .partners-container {
     @apply flex flex-col lg:pl-[50px] lg:flex-row items-center justify-between gap-10 lg:gap-25;
