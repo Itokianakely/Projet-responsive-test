@@ -97,7 +97,6 @@
       <div class="choix-grid">
         <!-- Carte Crémation -->
         <div class="choix-card">
-          <!-- Remplace le lien (src) par ton image locale, ex: ./src/assets/image-cremation.jpg -->
           <img src="./src/assets/Cremation.svg" alt="Urne crémation" class="choix-img">
           <div class="choix-text">
             <h3>Cremation</h3>
@@ -107,7 +106,6 @@
 
         <!-- Carte Inhumation -->
         <div class="choix-card">
-          <!-- Remplace le lien (src) par ton image locale -->
           <img src="./src/assets/Inhumation.svg" alt="Cercueil inhumation" class="choix-img">
           <div class="choix-text">
             <h3>Inhumation</h3>
@@ -124,7 +122,6 @@
     <!-- SECTION SERVICE PERSONNALISÉ -->
     <section class="service-perso-section">
       <div class="service-perso-container">
-        <!-- Remplace le lien (src) par ton image locale de bougies -->
         <img src="./src/assets/bougies.svg" alt="Bougies allumées" class="service-perso-img">
         
         <div class="service-perso-text">
@@ -136,13 +133,12 @@
 
     <!-- SECTION ENGAGEMENT VERS L'EXCELLENCE -->
     <section class="engagement-section">
-      <!-- Image de fond (prend 100% de la largeur) -->
+      <!-- Image de fond -->
       <div class="engagement-bg">
-        <!-- Remplace ce lien par ton image locale -->
         <img src="./src/assets/arbre.jpg" alt="Arbre coeur">
       </div>
       
-      <!-- Conteneur aligné pour la carte blanche -->
+      <!-- Conteneur  -->
       <div class="engagement-container">
         <div class="engagement-card">
           <h2>Un Engagement Vers<br> l'Excellence</h2>
@@ -166,7 +162,7 @@
         <!-- Carte Avis -->
         <div class="testimonial-card">
           <div class="stars">
-            <!-- 5 Étoiles (j'utilise des SVG Tailwind) -->
+            <!-- 5 Étoiles -->
             <img src="./src/assets/star.svg" alt="star" class="hover:-translate-y-1 transition-transform duration-200">
             <img src="./src/assets/star.svg" alt="star" class="hover:-translate-y-1 transition-transform duration-200"> 
             <img src="./src/assets/star.svg" alt="star" class="hover:-translate-y-1 transition-transform duration-200">
@@ -175,7 +171,7 @@
           </div>
           <p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facilis dicta accusamus eveniet explicabo aliquid cupiditate perspiciatis sint rem quasi.</p>
           <div class="author">
-            <!-- Cercle gris (tu peux y mettre une image) -->
+            <!-- Cercle gris  -->
             <div class="avatar"></div>
             <div class="author-info">
               <h4>John Doe</h4>
@@ -476,48 +472,43 @@
 
     <!-- FOOTER DU SITE -->
     <footer class="site-footer">
-      <div class="footer-container">
-        
-        <!-- Colonne 1 : Logo & Description -->
-        <div class="footer-col brand-col">
-          <h2 class="footer-logo">LOGO</h2>
-          <p class="footer-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facilis dicta accusamus eveniet explicabo aliquid cupiditate perspiciatis sint rem quasi.</p>
-          <div class="social-links">
-             <a href="#"> <img src="./src/assets/icone-google.svg" alt="icone-google"> </a>
-            <a href="#"> <img src="./src/assets/icone-x.svg" alt="icone-x"> </a>
-            <a href="#"> <img src="./src/assets/icone-instagram.svg" alt="icone-instagram"> </a>
-            <a href="#"> <img src="./src/assets/icone-whatsapp.svg" alt="icone-whatsapp"> </a>
-            <a href="#"> <img src="./src/assets/icone-facebook.svg" alt="icone-facebook"> </a>
-          </div>
-        </div>
-
-        <!-- Colonne 2 : Horaires & Téléphone -->
-        <div class="footer-col info-col">
-          <div class="info-block">
-            <h4>Office Hours</h4>
-            <p>Mon-Fri 8:00 AM - 6:00 PM<br>Sat 8:00 AM - 12:00 NN</p>
-          </div>
-          <div class="info-block mt-6">
-            <h4>Landline</h4>
-            <p>+3(500) 2460-5008</p>
-          </div>
-        </div>
-
-        <!-- Colonne 3 : Adresse & Bouton -->
-        <div class="footer-col address-col">
-          <div class="info-block">
-            <h4>Adress</h4>
-            <p>55 Avenue Général de gaulle<br>94700 Maisons-Alfort</p>
-          </div>
-          <a href="#" class="btn-contact-us">Contact Us</a>
-        </div>
-
+  <div class="footer-container">
+    
+    <!-- Colonne 1 : Prend la moitié de la place -->
+    <div class="footer-col brand-col">
+      <div class="footer-logo">LOGO</div>
+      <p class="footer-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facilis dicta accusamus eveniet explicabo aliquid cupiditate perspiciatis sint rem quasi.</p>
+      <div class="social-links">
+          <a href="#"> <img src="./src/assets/google-logo.svg" alt="icone-google"> </a>
+          <a href="#"> <img src="./src/assets/x-logo.svg" alt="icone-x"> </a>
+          <a href="#"> <img src="./src/assets/insta-logo.svg" alt="icone-instagram"> </a>
+          <a href="#"> <img src="./src/assets/insta-logo.svg" alt="icone-whatsapp"> </a>
+          <a href="#"> <img src="./src/assets/facebook-logo.svg" alt="icone-facebook"> </a>
       </div>
+    </div>
+
+    <!-- Colonne 2 : Horaires et Téléphone -->
+    <div class="footer-col hours-col">
+      <h4>Office Hours</h4>
+      <p>Mon-Fri 8:00 AM - 6:00 PM</p>
+      <p>Sat 8:00 AM - 12:00 NN</p>
       
-      <div class="footer-bottom-line"></div>
-    </footer>
+      <h4 class="espacement-titre">Landline</h4>
+      <p>+3(500) 2460-5008</p>
+    </div>
+
+    <!-- Colonne 3 : Adresse et Bouton -->
+    <div class="footer-col address-col">
+      <h4>Adress</h4>
+      <p>55 Avenur Général de gaulle<br>94700 Maisons-Alfort</p>
+      <a href="#" class="btn-contact-us">Contact Us</a>
+    </div>
+
+  </div>
+</footer>
 
 
     <script type="module" src="/src/main.js"></script>
+
   </body>
 </html>
