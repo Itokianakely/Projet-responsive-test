@@ -78,7 +78,7 @@ body {
     @apply flex flex-col justify-center items-center gap-[5px] w-8 h-8 lg:hidden shrink-0 cursor-pointer;
 
     .nav-bar-toggle-bar {
-      @apply block w-6 h-[2px] bg-black rounded-[10px] transition-all duration-300;
+      @apply block w-6 h-[2px] bg-black rounded-[10px] transition-all;
     }
 
     &.active {
