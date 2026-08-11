@@ -12,51 +12,49 @@ body {
 
 /* --- SECTION TOP BAR --- */
 .top-bar {
-  @apply bg-[#1e2235] text-white flex flex-row items-center place-content-between h-12 py-2 pl-12.5 gap-1.5;
+  @apply bg-[#1e2235] text-white flex flex-row items-center place-content-between h-12 py-5 pl-12.5 gap-1.5;
 
   @media (max-width: 639px) {
-    @apply flex-col h-auto py-4 px-4 gap-4;
+    @apply flex-row items-stretch justify-between h-auto py-0 pl-0 pr-0 gap-0;
   }
-
   @screen sm {
     @apply flex-row justify-between px-10 py-0 gap-0;
   }
-
   @screen lg {
     @apply pl-[120px] pr-0;
   }
 
   .top-bar-left {
     @apply flex items-center text-sm font-medium gap-4;
-
     @media (max-width: 639px) {
-      @apply justify-center w-full;
+      @apply justify-start w-auto text-[11px] whitespace-nowrap pl-4 ;
     }
   }
 
   .top-bar-right {
     @apply flex items-center text-base font-medium gap-2.5;
-
     @media (max-width: 639px) {
-      @apply flex-col gap-3 w-full text-[13px] text-center;
+      @apply flex-row gap-2 w-auto text-[12px];
     }
-
     @screen lg {
       @apply gap-6;
+    }
+
+    .availability {
+      @media (max-width: 639px) {
+        @apply hidden;
+      }
     }
   }
 
   .btn-tel {
     @apply bg-[#ffb703] flex text-black font-bold h-12 py-3.5 px-3.5 no-underline transition-colors;
-
     @media (max-width: 639px) {
-      @apply w-full justify-center rounded;
+      @apply w-auto h-auto py-0 px-3 justify-center items-center rounded-none;
     }
-
     @screen lg {
       @apply px-8 items-center;
     }
-
     &:hover {
       @apply bg-[#ffa200];
     }
@@ -68,27 +66,57 @@ body {
   @apply bg-[#ffffff] text-black flex flex-col lg:flex-row items-center justify-between w-full max-w-full;
   @apply py-4 sm:py-5 px-4 sm:px-12.5 gap-4 lg:gap-0 lg:h-22;
 
-  .nav-bar-logo {
-    @apply flex items-center text-[22px] sm:text-[40px]  lg:text-[40px] xl:text-[40px]  font-bold shrink-0;
+  .nav-bar-top {
+    @apply flex flex-row items-center justify-between w-full lg:w-auto;
   }
-  
+
+  .nav-bar-logo {
+    @apply flex items-center text-[22px] sm:text-[40px] lg:text-[40px] xl:text-[40px] font-bold shrink-0;
+  }
+
+  .nav-bar-toggle {
+    @apply flex flex-col justify-center items-center gap-[5px] w-8 h-8 lg:hidden shrink-0 cursor-pointer;
+
+    .nav-bar-toggle-bar {
+      @apply block w-6 h-[2px] bg-black rounded-[10px] transition-all duration-300;
+    }
+
+    &.active {
+      .nav-bar-toggle-bar:nth-child(1) {
+        @apply translate-y-[7px] rotate-45;
+      }
+      .nav-bar-toggle-bar:nth-child(2) {
+        @apply opacity-0;
+      }
+      .nav-bar-toggle-bar:nth-child(3) {
+        @apply -translate-y-[7px] -rotate-45;
+      }
+    }
+  }
+
   .nav-bar-menu {
-    @apply flex flex-wrap items-center justify-center text-[14px] lg:text-[16px] gap-3 sm:gap-6 lg:gap-[30px] font-medium w-full lg:w-auto;
+    @apply hidden flex-col items-center justify-center text-[14px] lg:text-[16px] gap-3 sm:gap-6 lg:gap-[30px] font-medium w-full lg:w-auto;
+    @apply lg:flex lg:flex-row;
+
+    &.active {
+      @apply flex;
+    }
 
     a {
       @apply hover:text-[#B12A43] transition-colors whitespace-nowrap;
     }
-  } 
+  }
 }
+
 /* --- SECTION HERO --- */
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/image.jpg');  background-size: cover;
   background-position: center;
   
-  @apply w-full flex items-center min-h-[500px] px-12.5 py-25;
+  @apply w-full flex items-center min-h-[500px] px-4 py-25 sm:px-12.5;
 
   @screen lg {
-    @apply min-h-[650px] px-[120px] py-0;
+    @apply min-h-[650px] px-12.5 py-0;
   }
 
   .hero-contenu {
@@ -609,10 +637,14 @@ body {
       .blog-meta {
         @apply flex flex-wrap items-center gap-4 mt-auto border-t border-gray-100 pt-4;
 
-        .meta-item {
-          @apply flex items-center gap-[30px] text-[10px] sm:text-[14px] lg:text-[14px] xl:text-[14px] text-[#7D7D7D] font-medium;
+      .meta-container {
+        @apply flex gap-[30px] sm:gap-[10px] grid grid-cols-3 items-center w-full;
+      }
 
-          svg {
+      .meta-item {
+        @apply flex items-center gap-[3px] text-[10px] sm:text-[12px] lg:text-[12px] xl:text-[14px] text-[#7D7D7D] font-medium;
+
+        svg {
             @apply w-4 h-4;
           }
         }

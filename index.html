@@ -10,31 +10,38 @@
 
     <!-- SECTION TOP BAR -->
     <section class="top-bar">
-  <!-- BLOC GAUCHE -->
-  <div class="top-bar-left">
-    <span>8:00 am - 6:00 pm</span>
-  </div>
   
-  <!-- BLOC DROITE -->
-  <div class="top-bar-right">
-    <span class="availability">Available 24/7 | Call Now</span>
-    <a href="tel:+350024605008" class="btn-tel">+3(500) 2460-5008</a>
-  </div>
-</section>
+      <div class="top-bar-left">
+        <span>8:00 am - 6:00 pm</span>
+      </div>
+      
+      <div class="top-bar-right">
+        <span class="availability">Available 24/7 | Call Now</span>
+        <a href="tel:+350024605008" class="btn-tel">+3(500) 2460-5008</a>
+      </div>
+    </section>
 
-    <!-- SECTION NAVIGATION BAR-->
-      <section class="nav-bar">
+  <!-- SECTION NAVIGATION BAR-->
+    <section class="nav-bar">
+      <div class="nav-bar-top">
         <div class="nav-bar-logo">LOGO</div>
-        <div class="nav-bar-menu">
-          <a href="#">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Testimonial</a>
-          <a href="#">About</a>
-          <a href="#">Obituaries</a>
-          <a href="#">Ressources</a>
-          <a href="#">Contact</a>
-        </div>
-      </section>
+
+        <button class="nav-bar-toggle" id="navToggle" aria-label="Ouvrir" aria-expanded="false">
+          <span class="nav-bar-toggle-bar"></span>
+          <span class="nav-bar-toggle-bar"></span>
+          <span class="nav-bar-toggle-bar"></span>
+        </button>
+      </div>
+      <div class="nav-bar-menu" id="navMenu">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="#" class="nav-link">Testimonial</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Obituaries</a>
+        <a href="#" class="nav-link">Ressources</a>
+        <a href="#" class="nav-link">Contact</a>
+      </div>
+    </section>
 
 <!-- SECTION HERO -->
     <section class="hero">
@@ -431,6 +438,7 @@
           
           <div class="blog-meta">
             <!-- Auteur -->
+             <div class="meta-container">
             <div class="meta-item">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
               <span>Yoh</span>
@@ -446,6 +454,7 @@
               <span>Views 305</span>
             </div>
           </div>
+          </div>
         </article>
 
         <!-- Carte Blog 2 -->
@@ -454,9 +463,11 @@
           <h3 class="blog-title">Title Blog</h3>
           <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facilis dicta accusamus eveniet explicabo aliquid cupiditate perspiciatis sint rem quasi.</p>
           <div class="blog-meta">
+            <div class="meta-container">
             <div class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg><span>Yoh</span></div>
             <div class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg><span>07 Aout 2026</span></div>
             <div class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg><span>Views 305</span></div>
+            </div> 
           </div>
         </article>
 
@@ -466,9 +477,11 @@
           <h3 class="blog-title">Title Blog</h3>
           <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facilis dicta accusamus eveniet explicabo aliquid cupiditate perspiciatis sint rem quasi.</p>
           <div class="blog-meta">
+            <div class="meta-container">
             <div class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg><span>Yoh</span></div>
             <div class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg><span>07 Aout 2026</span></div>
             <div class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg><span>Views 305</span></div>
+            </div>
           </div>
         </article>
       </div>
@@ -517,6 +530,7 @@
 
 
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
 
   </body>
 </html>
